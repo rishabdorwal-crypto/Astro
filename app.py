@@ -105,7 +105,7 @@ vs = stall_speed(
 
 stress = estimated_wing_root_stress(
     current["lift_N"],
-    span,
+    wingspan,
     spar_width,
     spar_thickness,
 )
