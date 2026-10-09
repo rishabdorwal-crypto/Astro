@@ -257,3 +257,88 @@ st.caption(
     "reference areas, coefficients, and physical measurements "
     "before drawing real engineering conclusions."
 )
+
+
+# ---------- MODEL TO FULL-SCALE CALCULATOR ----------
+st.divider()
+st.header("Model-to-Full-Scale Calculator")
+st.write(
+    "Enter how many times larger the real aircraft is than "
+    "the wind-tunnel model."
+)
+
+scale_factor = st.number_input(
+    "Linear scale-up ratio (1 : N)",
+    min_value=1.0,
+    max_value=1000.0,
+    value=10.0,
+    step=1.0,
+    help="Example: 10 means 1 unit on the model represents 10 units on the real aircraft."
+)
+
+st.subheader("Full-Scale Operating Conditions")
+
+full_scale_velocity = st.number_input(
+    "Full-scale flight speed (m/s)",
+    min_value=0.1,
+    max_value=500.0,
+    value=30.0,
+    step=1.0
+)
+
+# Geometric scaling
+full_span = wingspan_m * scale_factor
+full_spar_width = spar_width_m * scale_factor
+full_spar_thickness = spar_thickness_m * scale_factor
+full_area = wing_area * scale_factor**2
+
+# Idealized geometric mass scaling:
+# assumes the same average material/density and geometric similarity.
+estimated_full_mass = mass_kg * scale_factor**3
+
+st.subheader("Scaled Geometric Attributes")
+
+c1, c2 = st.columns(2)
+c1.metric("Scale Ratio", f"1 : {scale_factor:g}")
+c2.metric("Wing Reference Area", f"{full_area:.3f} m²")
+
+c3, c4 = st.columns(2)
+c3.metric("Wing Span", f"{full_span:.3f} m")
+c4.metric("Estimated Mass", f"{estimated_full_mass:.2f} kg")
+
+c5, c6 = st.columns(2)
+c5.metric("Spar Width", f"{full_spar_width:.4f} m")
+c6.metric("Spar Thickness", f"{full_spar_thickness:.4f} m")
+
+st.caption(
+    "Mass scaling assumes geometric similarity and identical average "
+    "density. Real aircraft structures do not necessarily follow this rule."
+)
+
+# Full-scale aerodynamic estimate
+full_results = aerodynamic_forces(
+    rho=rho,
+    velocity=full_scale_velocity,
+    wing_area=full_area,
+    angle_deg=angle_deg,
+    cl_max=cl_max,
+    stall_angle_deg=stall_angle_deg
+)
+
+st.subheader("Estimated Full-Scale Aerodynamic Results")
+
+r1, r2, r3 = st.columns(3)
+r1.metric("Estimated Lift", f'{full_results["lift_N"]:.2f} N')
+r2.metric("Estimated Drag", f'{full_results["drag_N"]:.2f} N')
+r3.metric("Dynamic Pressure", f'{full_results["dynamic_pressure_pa"]:.2f} Pa')
+
+r4, r5 = st.columns(2)
+r4.metric("Lift Coefficient", f'{full_results["CL"]:.3f}')
+r5.metric("Drag Coefficient", f'{full_results["CD"]:.4f}')
+
+st.warning(
+    "These are simulation-based estimates. The calculation assumes the "
+    "model's aerodynamic coefficient model is applicable at full scale. "
+    "Reynolds-number effects, compressibility, turbulence and structural "
+    "differences are not automatically corrected."
+)
