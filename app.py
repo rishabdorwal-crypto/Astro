@@ -287,14 +287,14 @@ full_scale_velocity = st.number_input(
 )
 
 # Geometric scaling
-full_span = wingspan_m * scale_factor
-full_spar_width = spar_width_m * scale_factor
-full_spar_thickness = spar_thickness_m * scale_factor
+full_span = wingspan * scale_factor
+full_spar_width = spar_width * scale_factor
+full_spar_thickness = spar_thickness * scale_factor
 full_area = wing_area * scale_factor**2
 
 # Idealized geometric mass scaling:
 # assumes the same average material/density and geometric similarity.
-estimated_full_mass = mass_kg * scale_factor**3
+estimated_full_mass = mass * scale_factor**3
 
 st.subheader("Scaled Geometric Attributes")
 
