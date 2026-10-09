@@ -13,12 +13,12 @@ from validation import validate_inputs, validate_result, data_status
 
 
 st.set_page_config(
-    page_title="AeroLab Dashboard",
+    page_title="Astro Dashboard",
     page_icon="✈️",
     layout="wide",
 )
 
-st.title("✈️ AeroLab")
+st.title("✈️ Astro")
 st.subheader("Aerodynamic Testing & Analysis")
 st.caption("Low-cost wind-tunnel concept | Simulation prototype")
 
@@ -30,7 +30,7 @@ st.warning(
 
 
 # ---------- SIDEBAR CONTROLS ----------
-st.sidebar.header("AeroLab Controls")
+st.sidebar.header("Astro Controls")
 
 st.sidebar.subheader("Airflow")
 rho = st.sidebar.slider(
