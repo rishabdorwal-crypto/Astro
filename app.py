@@ -55,18 +55,18 @@ st.sidebar.subheader("Aerodynamic Model")
 cl_max = st.sidebar.slider(
     "Maximum lift coefficient", 0.2, 2.5, 1.2, 0.1
 )
-stall_angle_deg = st.sidebar.slider(
+stall_angle = st.sidebar.slider(
     "Assumed stall angle (°)", 5.0, 25.0, 14.0, 0.5
 )
 
 st.sidebar.subheader("Structural Estimate")
-wingspan_m = st.sidebar.slider(
+wingspan = st.sidebar.slider(
     "Wing span (m)", 0.05, 20.0, 1.0, 0.05
 )
-spar_width_m = st.sidebar.slider(
+spar_width = st.sidebar.slider(
     "Spar width (m)", 0.001, 1.0, 0.02, 0.001
 )
-spar_thickness_m = st.sidebar.slider(
+spar_thickness = st.sidebar.slider(
     "Spar thickness (m)", 0.001, 1.0, 0.01, 0.001
 )
 
