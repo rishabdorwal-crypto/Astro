@@ -44,10 +44,10 @@ st.sidebar.subheader("Wing / Model")
 wing_area = st.sidebar.slider(
     "Wing reference area (m²)", 0.01, 10.0, 0.25, 0.01
 )
-mass_kg = st.sidebar.slider(
+mass = st.sidebar.slider(
     "Aircraft mass (kg)", 0.1, 1000.0, 1.0, 0.1
 )
-angle_deg = st.sidebar.slider(
+angle = st.sidebar.slider(
     "Angle of attack (°)", -20.0, 20.0, 5.0, 0.5
 )
 
