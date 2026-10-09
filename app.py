@@ -320,9 +320,9 @@ full_results = aerodynamic_forces(
     rho=rho,
     velocity=full_scale_velocity,
     wing_area=full_area,
-    angle_deg=angle_deg,
+    angle_deg=angle,
     cl_max=cl_max,
-    stall_angle_deg=stall_angle_deg
+    stall_angle_deg=stall_angle
 )
 
 st.subheader("Estimated Full-Scale Aerodynamic Results")
