@@ -80,3 +80,42 @@ Suggestions, engineering feedback, and collaboration are welcome.
 ## 📜 License
 
 License to be selected before public reuse and distribution.
+
+## AI Usage Disclosure
+
+AI assistance was used during the development of **AeroScale** for dashboard design, implementation guidance, input validation, market research, and comparison with existing aerodynamic testing facilities. The following prompts were used with ChatGPT:
+
+### Prompts Used
+
+**1. Dashboard Design and Real-Time Scaling Calculations**
+
+> Give me a basic dashboard design that takes input of flight parameters and implements my scaling logic to compute the attributes in real time. Currently, the inputs will be provided manually, but the system is intended to receive data from wind tunnel sensors in the future.
+
+**Purpose:** To assist with the dashboard layout, input handling, and integration of the project's scaling calculations.
+
+**2. Parameter Validation**
+
+> Make a separate Python script to validate all the parameters before running calculations.
+
+**Purpose:** To develop a separate validation layer that checks input parameters before calculations are performed, helping prevent invalid inputs and calculation errors.
+
+**3. Indian Drone and UAV Market Research**
+
+> What is the current status and demand of the drone and UAV sector in India, and what is the scope of wind tunnel testing?
+
+**Purpose:** To understand the Indian drone and UAV industry's development, potential demand for aerodynamic testing, and possible market opportunities for AeroScale.
+
+**4. Comparison with Existing Testing Facilities**
+
+> Compare my project idea with existing aerodynamic testing facilities.
+
+**Purpose:** To evaluate AeroScale against existing wind tunnels and aerodynamic testing methods, identifying potential differences in cost, accessibility, workflow, and intended users.
+
+### Human Review and Responsibility
+
+AI-generated suggestions and outputs were used as development assistance and research guidance. The project team is responsible for reviewing, modifying, testing, and validating the implementation, calculations, technical claims, and research findings before relying on them.
+
+AI-generated market information and comparisons should be independently verified using reliable sources. The accuracy of aerodynamic predictions depends on the physical design, sensor calibration, test conditions, scaling assumptions, and experimental validation. AI assistance does not establish the technical accuracy or performance of the system.
+
+**AI tool used:** ChatGPT by OpenAI.
+
