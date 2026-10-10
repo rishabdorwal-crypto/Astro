@@ -83,7 +83,7 @@ License to be selected before public reuse and distribution.
 
 ## AI Usage Disclosure
 
-AI assistance was used during the development of **AeroScale** for dashboard design, implementation guidance, input validation, market research, and comparison with existing aerodynamic testing facilities. The following prompts were used with ChatGPT:
+AI assistance was used during the development of **Astro** for dashboard design, implementation guidance, input validation, market research, and comparison with existing aerodynamic testing facilities. The following prompts were used with ChatGPT:
 
 ### Prompts Used
 
@@ -103,13 +103,13 @@ AI assistance was used during the development of **AeroScale** for dashboard des
 
 > What is the current status and demand of the drone and UAV sector in India, and what is the scope of wind tunnel testing?
 
-**Purpose:** To understand the Indian drone and UAV industry's development, potential demand for aerodynamic testing, and possible market opportunities for AeroScale.
+**Purpose:** To understand the Indian drone and UAV industry's development, potential demand for aerodynamic testing, and possible market opportunities for Astro.
 
 **4. Comparison with Existing Testing Facilities**
 
 > Compare my project idea with existing aerodynamic testing facilities.
 
-**Purpose:** To evaluate AeroScale against existing wind tunnels and aerodynamic testing methods, identifying potential differences in cost, accessibility, workflow, and intended users.
+**Purpose:** To evaluate Astro against existing wind tunnels and aerodynamic testing methods, identifying potential differences in cost, accessibility, workflow, and intended users.
 
 ### Human Review and Responsibility
 
